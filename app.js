@@ -8,6 +8,7 @@ var express = require('express');
 var bodyparser = require('body-parser');
 var main = require('./router/main');
 var product = require('./router/product');
+var search = require('./router/search');
 var app = express();
 
 app.use(express.static('public'));
@@ -17,6 +18,7 @@ app.use(bodyparser.urlencoded({extended:true}));
 
 app.use('/main',main);
 app.use('/product',product);
+app.use('/search',search);
 
 if(cluster.isMaster){
     for(var i=0;i<cpus;i++){
