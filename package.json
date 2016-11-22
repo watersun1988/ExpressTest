@@ -1,0 +1,23 @@
+{
+  "name": "expresstest",
+  "version": "1.0.0",
+  "description": "learn express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watersun1988/ExpressTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/watersun1988/ExpressTest/issues"
+  },
+  "homepage": "https://github.com/watersun1988/ExpressTest#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
