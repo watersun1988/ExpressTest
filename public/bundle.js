@@ -21930,7 +21930,7 @@
 
 	    getMyProduct: function getMyProduct() {
 	        $.get('../main', function (data) {
-	            console.log("data:" + data.result.data[0].id);
+	            console.log("data:" + data.reason);
 	            ListStore.items = data.result.data;
 	            ListStore.emitChange();
 	        });
@@ -22555,10 +22555,16 @@
 
 	    getInitialState: function getInitialState() {
 	        return {
-	            data: ListStore.getId(this.props.id)
+	            data: {}
 	        };
 	    },
-	    componentDidMount: function componentDidMount() {},
+	    componentDidMount: function componentDidMount() {
+	        $.get("../product/" + this.props.id, function (res) {
+	            this.setState({
+	                data: res.result
+	            });
+	        }.bind(this));
+	    },
 	    render: function render() {
 	        return React.createElement(ProductPage, { data: this.state.data });
 	    }
