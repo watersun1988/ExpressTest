@@ -30,7 +30,7 @@ var output={
             },
             {
                 time:'150',
-                price:'500'
+                price:'200'
             },
         ]
     },
